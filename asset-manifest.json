@@ -1,13 +1,21 @@
 {
   "files": {
-    "main.css": "/react-homework-template/static/css/main.7acaea2f.css",
-    "main.js": "/react-homework-template/static/js/main.07d3183d.js",
-    "index.html": "/react-homework-template/index.html",
-    "main.7acaea2f.css.map": "/react-homework-template/static/css/main.7acaea2f.css.map",
-    "main.07d3183d.js.map": "/react-homework-template/static/js/main.07d3183d.js.map"
+    "main.css": "/test-project/static/css/main.ae336183.css",
+    "main.js": "/test-project/static/js/main.a563a148.js",
+    "static/js/485.2c9b1884.chunk.js": "/test-project/static/js/485.2c9b1884.chunk.js",
+    "static/js/164.cc8c9405.chunk.js": "/test-project/static/js/164.cc8c9405.chunk.js",
+    "static/js/375.73c99814.chunk.js": "/test-project/static/js/375.73c99814.chunk.js",
+    "static/media/card.png": "/test-project/static/media/card.010ab3c33bc13f300d33.png",
+    "static/media/logo.svg": "/test-project/static/media/logo.e917114d7945c04c85a8946a331d28b6.svg",
+    "index.html": "/test-project/index.html",
+    "main.ae336183.css.map": "/test-project/static/css/main.ae336183.css.map",
+    "main.a563a148.js.map": "/test-project/static/js/main.a563a148.js.map",
+    "485.2c9b1884.chunk.js.map": "/test-project/static/js/485.2c9b1884.chunk.js.map",
+    "164.cc8c9405.chunk.js.map": "/test-project/static/js/164.cc8c9405.chunk.js.map",
+    "375.73c99814.chunk.js.map": "/test-project/static/js/375.73c99814.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7acaea2f.css",
-    "static/js/main.07d3183d.js"
+    "static/css/main.ae336183.css",
+    "static/js/main.a563a148.js"
   ]
 }
