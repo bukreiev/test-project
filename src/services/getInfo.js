@@ -8,4 +8,23 @@ export async function getUsers() {
   const response = await endpoint(`users`);
   return response.data;
 }
-export async function addFollowers() {}
+
+export async function increaseUserFollowers(user) {
+  const response = await axios.put(`users/${user.id}`, {
+    name: user.name,
+    avatar: user.avatar,
+    followers: user.followers + 1,
+    tweets: user.tweets,
+  });
+  return response.data;
+}
+
+export async function decreaseUserFollowers(user) {
+  const response = await axios.put(`users/${user.id}`, {
+    name: user.name,
+    avatar: user.avatar,
+    followers: user.followers - 1,
+    tweets: user.tweets,
+  });
+  return response.data;
+}

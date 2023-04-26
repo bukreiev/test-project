@@ -3,6 +3,7 @@ import { Item, List, LoadMore } from './CardList.styled';
 import { useState, useEffect } from 'react';
 import { getUsers } from 'services/getInfo';
 import { toast } from 'react-toastify';
+import { increaseUserFollowers } from 'services/getInfo';
 
 function CardList({ filterState }) {
   const [users, setUsers] = useState([]);
@@ -28,8 +29,19 @@ function CardList({ filterState }) {
     setPerPage(perPage + 3);
   }
 
+  function updateUser(id, newProps) {
+    setUsers(users => {
+      return users.map(user => {
+        if (user.id === id) {
+          return { ...user, ...newProps };
+        } else {
+          return user;
+        }
+      });
+    });
+  }
+
   function handleClick(userId) {
-    // const savedUsers = JSON.parse.localStorage.getItem('followedUsers');
     if (followedUsers.includes(userId)) {
       const updatedUsers = followedUsers.filter(id => id !== userId);
       setFollowedUsers(updatedUsers);
@@ -37,6 +49,17 @@ function CardList({ filterState }) {
     } else {
       setFollowedUsers([...followedUsers, userId]);
       localStorage.setItem('followedUsers', JSON.stringify(followedUsers));
+      async function add(user) {
+        try {
+          const updatedUser = await increaseUserFollowers(user);
+          const idToUpdate = updatedUser.id;
+          const newProps = { followers: updatedUser.followers };
+          updateUser(idToUpdate, newProps);
+        } catch (error) {
+          console.log(error);
+        }
+      }
+      add(userId);
     }
   }
 
