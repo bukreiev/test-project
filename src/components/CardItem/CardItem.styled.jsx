@@ -94,6 +94,11 @@ export const Button = styled.button`
   border-radius: 10.3108px;
   border: none;
   cursor: pointer;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    scale: 1.1;
+  }
 
   &.active {
     background: #5cd3a8;

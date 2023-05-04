@@ -39,10 +39,12 @@ export const LinkToCards = styled(Link)`
   border-radius: 8px;
   background-color: #fff;
   color: #5736a3;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   cursor: pointer;
   :hover {
     background-color: #f0f0f0;
     opacity: 0.95;
+    scale: 1.1;
   }
 `;
